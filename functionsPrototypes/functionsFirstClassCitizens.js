@@ -42,3 +42,20 @@ console.log('Products sorted by prices:');
 products.sort(compareBy('price'));
 
 console.table(products);
+
+// defines two functions that convert a length in centimeters to inches and vice versa:
+function cmToIn(length) {
+    return length / 2.54;
+}
+function inToCm(length) {
+    return length * 2.54;
+}
+
+function convert(fn, length) {
+    return fn(length);
+}
+let inches = convert(cmToIn, 10);
+console.log(inches); //3.937007874015748
+
+let cm = convert(inToCm, 10);
+console.log(cm); //25.4
